@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        form {
+            font-family: Verdana, sans-serif;
+            width: 250px;
+            padding: 5px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            }
+        input {
+            font: 1em Verdana, sans-serif;
+            width: 250px;
+            box-sizing: border-box;
+            border: 1px solid #777;
+        }
+        input:focus {
+            border-color: coral;
+        }
+        label {
+            display: inline-block;
+            width: 50px;
+            text-align: right;
+        }
+        div {
+            padding: 0.1em;
+        }
+    </style>
+</head>
+<body>
+<h2>Registration <br /> in the game</h2>
+<form>
+    <div>
+        <label for="unick">Nik:</label>
+        <input type="text" id="unick" name="userNick">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="userEmail">
+    </div>
+    <div>
+        <ladel for="date">Birthday:</ladel>
+        <input type="date" name="birthday" id="userBirthday">
+    </div>
+    <div>
+        <label for="floor">Floor:</label>
+        <input type="text" name="floor" id="floor" list="floorSuggestions">
+        <datalist id="floorSuggestions">
+            <option>female</option>
+            <option>male</option>
+        </datalist>
+    </div>
+    <div>
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country" list="countrySuggestions">
+        <datalist id="countrySuggestions">
+            <option>Russia</option>
+            <option>Portugal</option>
+            <option>Poland</option>
+            <option>Norway</option>
+            <option>Nigeria</option>
+            <option>Monaco</option>
+            <option>Moldova</option>
+            <option>Mexico</option>
+            <option>Austria</option>
+            <option>England</option>
+            <option>France</option>
+            <option>Italy</option>
+        </datalist>
+    </div>
+    <div>
+        <label for="herotype">Hero:</label>
+        <input type="text" id="herotype" name="userHero">
+    </div>
+    <div>
+        <ladel for="gamingexperience">Gaming experience</ladel>
+        <input type="number" name="userexperience" id="gamingexperience"
+               min="0" max="60"
+               step="1">
+    </div>
+    <div>
+        <input type="submit" value="Register">
+    </div>
+</form>
+</body>
+</html>

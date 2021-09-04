@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        label, span {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+        }
+
+        form li + li {
+            margin-top: 0.5em;
+        }
+
+        form {
+            width: 300px;
+            padding: 1em;
+            border: 1px solid rgba(23, 4, 56, 1);
+            border-radius: 2em;
+        }
+
+        textarea {
+            vertical-align: top;
+        }
+
+        input, textarea {
+            font: 1em "Comic Sans MS";
+            width: 200px;
+            border: 1px solid #777;
+        }
+
+        input:focus, textarea:focus {
+            border-color: gold;
+        }
+
+        input[id="submitBtn"] {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        select {
+            width: 150px;
+            box-sizing: border-box;
+            border: 1px solid #777;
+
+        }
+    </style>
+    <title>sushi</title>
+</head>
+<body>
+<h2>order basket</h2>
+<form action="/search" method="post">
+    <div>
+        <label for="uname">Name:</label>
+        <input type="text" id="uname" name="userName">
+    </div>
+    <div>
+        <label for="adress">Adress:</label>
+        <input type="text" id="adress" name="userAdress">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="userEmail">
+    </div>
+    <div>
+        <label for="phone_number">Phone number:</label>
+        <input type="text" id="phone_number" name="userphonenumber">
+    </div>
+    <div>
+        <label for="numberofsticks">Number of sticks:</label>
+        <input type="number" name="rating" id="numberofsticks" min="1" max="25" step="1">
+    </div>
+    <div>
+        <label for="kindofsticks">Kind of sticks:</label>
+        <input type="text" name="sticks" id="kindofsticks" list="sticksSuggestions">
+        <datalist id="sticksSuggestions">
+            <option>ordinary</option>
+            <option>educational</option>
+        </datalist>
+    </div>
+    <div>
+        <label for="napkins">Do i need napkins:</label>
+        <input type="text" name="napkins" id="napkins" list="napkinsSuggestions">
+        <datalist id="napkinsSuggestions">
+            <option>yes</option>
+            <option>no</option>
+        </datalist>
+    </div>
+    <div>
+        <label>
+            <span>sushi:</span>
+            <select name="nameofsushi" id="nameofsushi">
+                <option>Philadelphia</option>
+                <option>California</option>
+                <option>Okinawa</option>
+                <option>Lava</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label for="massege">Comment:</label>
+        <textarea name="usercomment" id="massege"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Send">
+    </div>
+</form>
+</body>
+</html>
